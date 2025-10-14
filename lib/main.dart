@@ -5,11 +5,7 @@ import 'package:luxery/features/auth/pressentation/components/landing_page.dart'
 import 'package:luxery/themes/dark_mode.dart';
 import 'package:luxery/themes/light_mode.dart';
 import 'features/home/data/product_repo.dart';
-
-// --- NEW IMPORTS NEEDED ---
-// 1. Import ProductRepo
 import 'features/home/data/product_repo.dart';
-// 2. Import other existing files
 import 'features/auth/data/firebase_auth_repo.dart';
 import 'features/auth/pressentation/cubits/auth_cubit.dart';
 import 'features/cart/cubit/cart_cubit.dart';
@@ -34,21 +30,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        // 🧩 Auth
+        //  Auth
         BlocProvider<AuthCubit>(
           create: (context) =>
           AuthCubit(authRepo: firebaseAuthRepo)..checkAuth(),
         ),
 
-        // 🛒 Cart
+        //  Cart
         BlocProvider<CartCubit>(
           create: (ctx) => CartCubit(),
         ),
 
-        // 📦 Product
+        //  Product
         // 2. Updated BlocProvider to use the initialized ProductRepo
         BlocProvider<ProductCubit>(
-          create: (_) => ProductCubit(productRepo)..loadProducts(), // <-- Updated
+          create: (_) => ProductCubit(productRepo)..loadProducts(),
         ),
       ],
       child: MaterialApp(

@@ -4,7 +4,7 @@ class ProductModel {
   final double price;
   final String imageUrl;
   final String category;
-  final String description; // ✅ Add this
+  final String description;
 
   ProductModel({
     required this.id,
@@ -12,7 +12,7 @@ class ProductModel {
     required this.price,
     required this.imageUrl,
     required this.category,
-    required this.description, // ✅ Add this
+    required this.description,
   });
 
   factory ProductModel.fromMap(Map<String, dynamic> data, String documentId) {
@@ -24,7 +24,7 @@ class ProductModel {
           : (data['price'] ?? 0.0),
       imageUrl: data['imageUrl'] ?? '',
       category: data['category'] ?? 'All',
-      description: data['description'] ?? 'No description available.', // ✅ Add this
+      description: data['description'] ?? 'No description available.',
     );
   }
 
@@ -34,7 +34,7 @@ class ProductModel {
       'price': price,
       'imageUrl': imageUrl,
       'category': category,
-      'description': description, // ✅ Add this
+      'description': description,
     };
   }
 }

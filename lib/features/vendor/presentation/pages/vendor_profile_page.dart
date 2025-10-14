@@ -35,7 +35,7 @@ class VendorProfilePage extends StatelessWidget {
 
             const Spacer(),
 
-            // 🚪 Logout Button
+            //  Logout Button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(

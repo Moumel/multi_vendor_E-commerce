@@ -44,7 +44,7 @@ class _CustomerHomeBodyState extends State<CustomerHomeBody> {
         if (state is ProductLoaded) {
           final allProducts = state.products;
 
-          // ✅ Fixed filtering logic
+          //  Fixed filtering logic
           final filteredProducts = allProducts.where((product) {
             final matchesFilter = _selectedFilter == 'All';
             final matchesSearch = product.name.toLowerCase().contains(
@@ -55,7 +55,7 @@ class _CustomerHomeBodyState extends State<CustomerHomeBody> {
 
           return Column(
             children: [
-              // 🔍 Search Bar
+              //  Search Bar
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: TextField(
@@ -73,7 +73,7 @@ class _CustomerHomeBodyState extends State<CustomerHomeBody> {
                 ),
               ),
 
-              // 🧩 Filter Chips
+              //  Filter Chips
               SizedBox(
                 height: 40,
                 child: ListView(
@@ -99,7 +99,7 @@ class _CustomerHomeBodyState extends State<CustomerHomeBody> {
 
               const SizedBox(height: 8),
 
-              // 🛍️ Product Grid
+              //  Product Grid
               Expanded(
                 child: filteredProducts.isEmpty
                     ? const Center(child: Text("No products found"))
@@ -220,7 +220,7 @@ class _CustomerHomeBodyState extends State<CustomerHomeBody> {
           );
         }
 
-        // 👇 Ensures the function always returns a widget
+        //  Ensures the function always returns a widget
         return const SizedBox.shrink();
       },
     );

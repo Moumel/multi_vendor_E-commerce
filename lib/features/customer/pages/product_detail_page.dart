@@ -27,7 +27,7 @@ class ProductDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🖼️ Product Image
+            //  Product Image
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.network(
@@ -39,7 +39,7 @@ class ProductDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // 🏷️ Product Name
+            // ️ Product Name
             Text(
               itemData.name,
               style: const TextStyle(
@@ -49,7 +49,7 @@ class ProductDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
 
-            // 💰 Price
+            //  Price
             Text(
               "\$${itemData.price.toString()}",
               style: TextStyle(
@@ -60,7 +60,7 @@ class ProductDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // 📝 Description
+            //  Description
             Text(
               itemData.description ?? "No description available.",
               style: TextStyle(
@@ -71,7 +71,7 @@ class ProductDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
-            // 🛒 Add to Cart Button
+            // Add to Cart Button
             SizedBox(
               width: double.infinity,
               height: 50,
