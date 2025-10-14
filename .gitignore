@@ -27,7 +27,7 @@ android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 lib/firebase_options.dart
 serviceAccountKey.json
-
+lib/features/auth/data/firebase_auth_repo.dart
 # Environment/config files
 .env
 *.env
